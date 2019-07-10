@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Ангелина Игнатенко](https://up.htmlacademy.ru/adaptive/17/user/1033877).
-* Наставник: `Неизвестно`.
+* Наставник: [Олег Зубов](https://up.htmlacademy.ru/adaptive/17/user/42701).
 
 ---
 
