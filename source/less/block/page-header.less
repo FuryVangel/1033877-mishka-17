@@ -1,10 +1,23 @@
-.site-list__item {
-  list-style: none;
-  border-bottom: 1px solid @lightgrey;
+.page-header__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+}
 
-  a {
-    font-weight: bold;
-    color: @black;
-    text-decoration: none;
+@media (min-width: @tablet-width) {
+  .page-header__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-width: 1150px;
   }
 }

@@ -6,7 +6,7 @@
 }
 
 .btn () {
-  font-family: "OpenSans", Arial, sans-serif;
+  font-family: "OpenSans", "Arial", sans-serif;
   font-weight: bold;
   line-height: 20px;
   text-decoration: none;
@@ -15,4 +15,21 @@
   background: @white;
   border: 2px solid @grey;
   outline: none;
+}
+
+.container-adaptive() {
+  min-width: 320px;
+  max-width: 500px;
+  margin: 0 auto;
+
+  @media @tablet-width {
+    min-width: 768px;
+    max-width: 1000px;
+  }
+
+  @media @desktop-width {
+    min-width: 1150px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
 }
