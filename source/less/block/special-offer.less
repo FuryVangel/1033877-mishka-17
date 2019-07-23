@@ -36,3 +36,109 @@
 
   text-align: center;
 }
+
+@media (min-width: @tablet-width) {
+  .special-offer__wrapper {
+    position: relative;
+    padding-bottom: 68px;
+  }
+
+  .special-offer__headings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 44px;
+    padding-bottom: 48px;
+  }
+
+  .special-offer__week-stuff {
+    width: 100px;
+    text-align: center;
+  }
+
+  .special-offer__description {
+    width: 250px;
+    font-size: 17px;
+    line-height: 30px;
+    padding-bottom: 37px;
+  }
+
+  .special-offer__types-list {
+    width: 250px;
+    font-size: 15px;
+  }
+
+  .special-offer__image {
+    position: absolute;
+    bottom: 60px;
+    right: 51px;
+    height: auto;
+    margin: 0;
+
+    img {
+      width: 333px;
+      height: 404px;
+    }
+  }
+
+  .special-offer__price {
+    align-self: flex-start;
+    width: 250px;
+    font-size: 18px;
+    padding-top: 56px;
+    padding-bottom: 34px;
+  }
+
+  .special-offer__order-btn {
+    width: 250px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .special-offer__wrapper {
+    padding-right: 76px;
+    padding-bottom: 95px;
+    padding-left: 222px;
+  }
+
+  .special-offer__headings {
+    padding-top: 124px;
+  }
+
+  .special-offer__week-stuff {
+    width: 100px;
+    text-align: center;
+  }
+
+  .special-offer__description {
+    padding-bottom: 50px;
+    width: 300px;
+  }
+
+  .special-offer__types-list {
+    width: 300px;
+  }
+
+  .special-offer__image {
+    z-index: -1;
+    right: 50px;
+    bottom: 95px;
+
+    img {
+      width: 525px;
+      height: 636px;
+    }
+  }
+
+  .special-offer__price {
+    width: 33%;
+    padding-top: 108px;
+    padding-left: 76px;
+    text-align: left;
+  }
+
+  .special-offer__order-btn {
+    width: 290px;
+  }
+}
