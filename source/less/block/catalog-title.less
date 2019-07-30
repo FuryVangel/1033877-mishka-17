@@ -1,7 +1,39 @@
 .catalog-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: @dust;
 
   h1 {
     .title();
+
+    padding-top: 69px;
+    padding-bottom: 77px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-title {
+    margin-top: -60px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-position: 0 bottom;
+    background-size: auto 23px;
+
+    h1 {
+      padding-top: 91px;
+      padding-bottom: 95px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-title {
+    background-size: auto;
+
+    h1 {
+      padding-top: 92px;
+      padding-bottom: 121px;
+    }
   }
 }
