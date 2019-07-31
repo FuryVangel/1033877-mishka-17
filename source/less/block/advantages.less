@@ -1,10 +1,15 @@
 .advantages {
   display: flex;
   flex-direction: column;
+  padding-left: 9.3%;
+  min-width: 320px;
+  margin: 0;
 }
 
 .advantages__title {
   .title();
+
+  padding-top: 30px;
 }
 
 .advantages__list {
@@ -12,34 +17,155 @@
   flex-direction: column;
   margin: 0;
   padding: 0;
+  padding-top: 29px;
+  padding-left: 2px;
   font-weight: bold;
   line-height: 20px;
   list-style: none;
 }
 
 .advantages__item {
-  width: 255px;
+  width: 79%;
   padding-top: 55px;
   padding-bottom: 28px;
   font-weight: bold;
+
+  &--flower {
+    width: 55.6%;
+  }
+
+  &--money {
+    width: 63.4%;
+  }
+
+  &--heart {
+    width: 57.1%;
+  }
+
+  &--ball {
+    width: 66.8%;
+  }
+
+  &--rocket {
+    width: 79.3%;
+  }
+
+  &--gift {
+    width: 63.1%;
+  }
 }
 
 @media (min-width: @tablet-width) {
+  .advantages {
+    min-width: 768px;
+    margin: 0 auto;
+    padding-left: 46px;
+    padding-bottom: 20px;
+  }
+
   .advantages__list {
     flex-direction: row;
     flex-wrap: wrap;
     font-size: 20px;
     line-height: 24px;
-    padding-left: 30px;
+    padding-left: 4px;
+    padding-top: 49px;
   }
 
   .advantages__item {
-    width: 40%;
-    padding-left: 30px;
+    width: 46.5%;
+    padding-bottom: 52px;
     font-weight: bold;
+
+    &--flower {
+      order: -2;
+      width: 215px;
+      padding-right: 100px;
+    }
+
+    &--money {
+      width: 236px;
+      padding-right: 50px;
+    }
+
+    &--heart {
+      order: 2;
+      width: 223px;
+      padding-right: 90px;
+    }
+
+    &--ball {
+      order: -2;
+      width: 248px;
+      margin-left: 22px;
+    }
+
+    &--rocket {
+      margin-left: 51px;
+    }
+
+    &--gift {
+      order: 3;
+      width: 245px;
+      padding-right: 30px;
+      margin-left: 24px;
+    }
   }
 
   .advantages__title {
-    padding-left: 60px;
+    padding-top: 47px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages {
+    min-width: 1150px;
+    margin: 0 auto;
+    padding-left: 222px;
+    padding-bottom: 2px;
+  }
+
+  .advantages__title {
+    padding-top: 58px;
+  }
+
+  .advantages__list {
+    padding-top: 47px;
+    padding-left: 3px;
+    padding-bottom: 19px;
+    width: 671px;
+  }
+
+  .advantages__item {
+    &--flower {
+      width: 210px;
+      padding-right: 100px;
+    }
+
+    &--money {
+      width: 245px;
+      padding-right: 50px;
+    }
+
+    &--heart {
+      width: 221px;
+      padding-right: 90px;
+    }
+
+    &--ball {
+      width: 261px;
+      margin-left: 59px;
+    }
+
+    &--rocket {
+      margin-left: 74px;
+      width: 302px;
+    }
+
+    &--gift {
+      width: 240px;
+      padding-right: 30px;
+      margin-left: 58px;
+    }
   }
 }

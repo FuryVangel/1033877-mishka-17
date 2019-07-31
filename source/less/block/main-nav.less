@@ -4,6 +4,7 @@
 }
 
 .main-nav__list {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-width: 320px;
@@ -12,134 +13,92 @@
   list-style: none;
 }
 
-.site-list__item {
-  position: relative;
-  display: flex;
-  border-bottom: 1px solid @lightgrey;
+.main-nav__toggle {
+  position: absolute;
+  top: 23px;
+  right: 26px;
+  z-index: 3;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  font-size: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
 
-  a {
-    width: 100%;
-    font-weight: bold;
-    color: @black;
-    padding-top: 26px;
-    padding-bottom: 28px;
-    padding-left: 110px;
-    text-decoration: none;
+  &:hover {
+    opacity: 0.6;
   }
 
-  &--logo {
-    padding-top: 20px;
-    padding-bottom: 22px;
-    padding-left: 130px;
-    border-top: 1px solid @lightgrey;
-    border-bottom: 1px solid @lightgrey;
-    line-height: 0;
+  &:active {
+    opacity: 0.3;
+  }
+}
 
-    a {
-      width: auto;
-      padding: 0;
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  z-index: 13;
+  width: 20px;
+  height: 14px;
+  background: url("../img/icon-menu-open.svg") no-repeat 50% 50%;
+  background-size: 20px 14px;
+}
+
+.main-nav--opened .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 4px;
+  width: 21px;
+  height: 20px;
+  background: url("../img/icon-menu-close.svg") no-repeat 50% 50%;
+  background-size: 21px 21px;
+}
+
+@media @mobile-width-only {
+  .main-nav--closed .site-list__item {
+    position: absolute;
+    top: -100px;
+
+    &--logo {
+      position: relative;
+      top: 0;
     }
   }
 
-  &--arrival,
-  &--sale,
-  &--delivery {
+  .main-nav--nojs .main-nav__toggle {
     display: none;
+  }
+
+  .main-nav--nojs .site-list__item {
+    position: relative;
+    top: 0;
+
+    &--arrival,
+    &--sale,
+    &--delivery {
+      display: none;
+    }
   }
 }
 
 @media (min-width: @tablet-width) {
   .main-nav {
-    width: 1150px;
+    width: auto;
+  }
+
+  .main-nav__toggle {
+    display: none;
   }
 
   .main-nav__list {
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
-  }
-
-  .site-list__item {
-    justify-content: flex-start;
-    font-size: 14px;
-    border-bottom: none;
-
-    a,
-    span {
-      padding-top: 20px;
-      padding-bottom: 20px;
-      text-align: left;
-    }
-
-    &--logo {
-      order: -3;
-      padding-top: 22px;
-      padding-bottom: 13px;
-      border-top: none;
-      border-bottom: 1px solid @lightgrey;
-
-      a {
-        width: auto;
-        padding: 0;
-      }
-
-      img {
-        width: 112px;
-        height: 46px;
-      }
-    }
-
-    &--search {
-      order: -2;
-      font-size: 0;
-      border: 1px solid @lightgrey;
-      border-top: none;
-
-      a {
-        padding-top: 32px;
-        padding-bottom: 32px;
-      }
-    }
-
-    &--cart {
-      order: -1;
-      font-size: 17px;
-      border-bottom: 1px solid @lightgrey;
-
-      a {
-        padding-top: 31px;
-        padding-right: 50px;
-        padding-bottom: 33px;
-        padding-left: 0;
-        text-align: right;
-      }
-    }
-
-    &--catalog {
-
-      a {
-        padding-left: 50px;
-      }
-    }
-
-    &--order {
-
-      a {
-        padding-left: 18px;
-      }
-    }
-
-    &--delivery {
-      display: flex;
-      order: 1;
-
-      span {
-        width: 100%;
-        padding-right: 50px;
-        text-align: right;
-        color: @grey;
-      }
-    }
+    flex-basis: 50%;
   }
 }
 
@@ -151,62 +110,6 @@
 
   .main-nav__list {
     justify-content: flex-start;
-  }
-
-  .site-list__item {
-    width: 265px;
-
-    &--logo {
-      align-self: flex-start;
-      order: -6;
-      padding-left: 24px;
-
-      a {
-        width: auto;
-        padding: 0;
-      }
-
-      img {
-        width: 148px;
-        height: 73px;
-      }
-    }
-
-    &--catalog {
-      order: -8;
-      border-bottom: 1px solid @lightgrey;
-    }
-
-    &--order {
-      order: -7;
-      border-left: 1px solid @lightgrey;
-      border-bottom: 1px solid @lightgrey;
-    }
-
-    &--search {
-      order: -5;
-    }
-
-    &--arrival {
-      display: flex;
-      order: -4;
-    }
-
-    &--sale {
-      display: flex;
-      order: -2;
-      font-size: 15px;
-    }
-
-    &--cart {
-      order: -4;
-      font-size: 15px;
-    }
-
-    &--delivery {
-      order: 1;
-      flex-grow: 1;
-      font-size: 15px;
-    }
+    min-width: 1150px;
   }
 }
