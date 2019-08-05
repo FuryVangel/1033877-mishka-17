@@ -25,6 +25,7 @@
 }
 
 .advantages__item {
+  position: relative;
   width: 79%;
   padding-top: 55px;
   padding-bottom: 28px;
@@ -32,26 +33,98 @@
 
   &--flower {
     width: 55.6%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 8px;
+      display: block;
+      width: 32px;
+      height: 37.3px;
+      background: url("../img/icon-feature-flower.svg") no-repeat 50% 50%;
+      background-size: 32px 37.3px;
+    }
   }
 
   &--money {
     width: 63.4%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 0;
+      display: block;
+      width: 46.5px;
+      height: 27.3px;
+      background-image: url("../img/icon-feature-money.svg");
+      background-size: 46.5px 27.3px;
+    }
   }
 
   &--heart {
     width: 57.1%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 7px;
+      display: block;
+      width: 33px;
+      height: 27.9px;
+      background: url("../img/icon-feature-heart.svg") no-repeat 50% 50%;
+      background-size: 33px 27.9px;
+    }
   }
 
   &--ball {
     width: 66.8%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 3px;
+      display: block;
+      width: 34.3px;
+      height: 34.3px;
+      background: url("../img/icon-feature-ball.svg") no-repeat 50% 50%;
+      background-size: 34.3px;
+    }
   }
 
   &--rocket {
     width: 79.3%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: -5px;
+      display: block;
+      width: 54.1px;
+      height: 23.2px;
+      background: url("../img/icon-feature-rocket.svg") no-repeat 50% 50%;
+      background-size: 54.1px 23.2px;
+    }
   }
 
   &--gift {
     width: 63.1%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 3px;
+      display: block;
+      width: 32.7px;
+      height: 32.5px;
+      background: url("../img/icon-feature-gift.svg") no-repeat 50% 50%;
+      background-size: 32.7px 32.5px;
+    }
   }
 }
 
