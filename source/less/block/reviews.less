@@ -1,0 +1,241 @@
+.reviews {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  background-color: @white;
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 6px;
+    background: url("../img/bg-zigzag-line.svg") repeat-x;
+    background-position: 0 bottom;
+    background-size: auto 6px;
+  }
+}
+
+.reviews__wrapper {
+  min-width: 320px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding-left: 9%;
+  padding-bottom: 50px;
+  background-image: none;
+}
+
+.reviews__title {
+  .title();
+
+  padding-top: 56px;
+  padding-bottom: 25px;
+}
+
+.reviews__list {
+  padding-bottom: 30px;
+}
+
+.reviews__item {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-size: 15px;
+}
+
+.reviews__text {
+  width: 80%;
+  margin: 0;
+  padding-left: 1px;
+  padding-bottom: 18px;
+  line-height: 30px;
+  color: @grey;
+}
+
+.reviews__author-name {
+  padding-bottom: 7px;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.reviews__author-account {
+  margin-top: 4px;
+  font-size: 17px;
+  line-height: 30px;
+  color: @grey;
+}
+
+.reviews__toggles {
+  margin-bottom: 38px;
+  font-size: 0;
+}
+
+.reviews__toggle {
+  width: 130px;
+  height: 52px;
+  padding: 0;
+  border: 1px solid @lightgrey;
+  background-color: @white;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &--prev {
+    background-image: url("../img/icon-left-arrow.svg");
+  }
+
+  &--next {
+    margin-left: -1px;
+    background-image: url("../img/icon-right-arrow.svg");
+  }
+}
+
+.reviews__button {
+  .btn();
+
+  width: 260px;
+  margin-left: 1px;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews {
+    padding: 0;
+
+    &::after {
+      height: 17px;
+      background-position: -15px 0;
+      background-size: 768px 17px;
+      bottom: 0;
+    }
+  }
+
+  .reviews__wrapper {
+    max-width: 960px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 83px;
+    padding-left: 6%;
+    padding-right: 6.5%;
+    padding-bottom: 145px;
+    background-color: @white;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 9px;
+    background-size: 350px 457px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
+  }
+
+  .reviews__title {
+    order: 1;
+    width: 60%;
+    padding-top: 0;
+  }
+
+  .reviews__list {
+    order: 3;
+  }
+
+  .reviews__item {
+    width: 300px;
+    padding-top: 26px;
+    font-size: 17px;
+  }
+
+  .reviews__text {
+    width: 650px;
+    padding-left: 3px;
+    padding-bottom: 10px;
+  }
+
+  .reviews__author-name {
+    padding-left: 2px;
+  }
+
+  .reviews__author-account {
+    padding-left: 2px;
+  }
+
+  .reviews__toggles {
+    order: 3;
+    align-self: flex-end;
+    margin-bottom: 32px;
+  }
+
+  .reviews__toggle {
+    width: 88px;
+    border: 0;
+  }
+
+  .reviews__button {
+    order: 2;
+    width: 175px;
+    margin-top: 5px;
+    padding-left: 4px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews {
+    padding-bottom: 60px;
+
+    &::after {
+      height: 23px;
+      background-size: 1150px 23px;
+    }
+  }
+
+  .reviews__wrapper {
+    padding-left: 221px;
+    padding-bottom: 151px;
+    padding-right: 50px;
+    background-position: 6.2% 15px;
+    width: 876px;
+  }
+
+  .reviews__title {
+    padding-top: 1px;
+    padding-bottom: 24px;
+  }
+
+  .reviews__item {
+    padding-top: 25px;
+  }
+
+  .reviews__text {
+    width: 800px;
+    padding-left: 4px;
+    padding-bottom: 10px;
+  }
+
+  .reviews__author-name {
+    padding-left: 4px;
+    padding-bottom: 6px;
+  }
+
+  .reviews__author-account {
+    padding-left: 4px;
+  }
+
+  .reviews__button {
+    margin-top: 11px;
+    padding-left: 5px;
+  }
+}
