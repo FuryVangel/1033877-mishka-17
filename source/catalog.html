@@ -110,7 +110,7 @@
           <div class="product__container">
             <div class="product__info">
               <h2 class="product__title">
-                <a href="#">Зайчик попрыгайчик</a>
+                <a href="bunny.html">Зайчик попрыгайчик</a>
               </h2>
               <p class="product__value">Рост 30 см, вес 200 г</p>
             </div>
@@ -139,7 +139,7 @@
           <div class="product__container">
             <div class="product__info">
               <h2 class="product__title">
-                <a href="#">Корзинка для белья</a>
+                <a href="clothing-basket.html">Корзинка для белья</a>
               </h2>
               <p class="product__value">Диаметр 15 см, высота 10 см</p>
             </div>
@@ -168,13 +168,13 @@
           <div class="product__container">
             <div class="product__info">
               <h2 class="product__title">
-                <a href="#">Большая корзинка для игрушек</a>
+                <a href="big-clothing-basket.html">Большая корзинка для игрушек</a>
               </h2>
               <p class="product__value">Диаметр 30 см, высота 30 см</p>
             </div>
             <div class="product__sell">
               <span class="product__price">1 500 руб.</span>
-              <a class="product__link" href="#">
+              <a class="product__link js-link" href="#">
                 <span class="visually-hidden">Добавить в корзину</span>
                 <svg class="product__cart-icon" width="20.3" height="18.9">
                   <use xlink:href="#icon-cart"></use>
@@ -184,6 +184,26 @@
           </div>
         </article>
       </div>
+      <section class="manufacturing">
+        <div class="manufacturing__title-wrapper">
+          <h2 class="manufacturing__title">Процесс производства</h2>
+        </div>
+        <div class="manufacturing__video">
+          <button class="manufacturing__play-btn">Play</button>
+          <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
+            <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" width="260" height="150" alt="Видео процесса производства">
+          </picture>
+        </div>
+        <div class="manufacturing__text">
+          <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a class="manufacturing__order-btn" href="form.html">Сделать заказ</a>
+        </div>
+      </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
@@ -231,5 +251,22 @@
         </div>
       </div>
     </footer>
+    <section class="modal">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <p class="modal__description">Выберите размер:</p>
+      <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="modal-form__size">
+          <input class="modal-form__input visually-hidden" type="checkbox" id="small" name="small">
+          <label class="modal-form__label" for="small">S</label>
+          <input class="modal-form__input visually-hidden" type="checkbox" id="medium" name="medium">
+          <label class="modal-form__label" for="medium">M</label>
+          <input class="modal-form__input visually-hidden" type="checkbox" id="large" name="large">
+          <label class="modal-form__label" for="large">L</label>
+        </p>
+        <button class="modal-form__btn" type="button">Добавить</button>
+      </form>
+    </section>
+    <script src="js/picturefill.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

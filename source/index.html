@@ -185,7 +185,7 @@
             <button class="reviews__toggle  reviews__toggle--prev" type="button">Предыдущий отзыв</button>
             <button class="reviews__toggle  reviews__toggle--next" type="button">Следующий отзыв</button>
           </div>
-          <a class="reviews__button" href="#">Написать</a>
+          <a class="reviews__button" href="reviews-add.html">Написать</a>
         </div>
       </section>
       <section class="contacts">
@@ -207,7 +207,7 @@
         <div class="contacts__map">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2376.7482320701793!2d30.320767368448106!3d59.938794780141166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1565630818729!5m2!1sru!2sru" width="320" height="457" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
-        <a class="contacts__btn btn" href="#">Напишите нам</a>
+        <a class="contacts__btn btn" href="feed-back.html">Напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
@@ -256,5 +256,22 @@
         </div>
       </div>
     </footer>
+    <section class="modal modal-add">
+      <h2 class="modal__title">Добавить в корзину</h2>
+      <p class="modal__description">Выберите размер:</p>
+      <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+        <p class="modal-form__size">
+          <input class="modal-form__input visually-hidden" type="checkbox" id="small" name="small">
+          <label class="modal-form__label" for="small">S</label>
+          <input class="modal-form__input visually-hidden" type="checkbox" id="medium" name="medium">
+          <label class="modal-form__label" for="medium">M</label>
+          <input class="modal-form__input visually-hidden" type="checkbox" id="large" name="large">
+          <label class="modal-form__label" for="large">L</label>
+        </p>
+        <button class="modal-form__btn" type="button">Добавить</button>
+      </form>
+    </section>
+    <script src="js/picturefill.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
