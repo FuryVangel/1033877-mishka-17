@@ -1,7 +1,6 @@
 var navMain = document.querySelector(".main-nav");
 var navToggle = document.querySelector(".main-nav__toggle");
-var link = document.querySelector(".special-offer__order-btn");
-var cartLink = document.querySelector(".product__link");
+var cartLink = document.querySelectorAll(".js-modal");
 var popup = document.querySelector(".modal-add");
 
 navMain.classList.remove("main-nav--nojs");
@@ -16,10 +15,12 @@ navToggle.addEventListener("click", function() {
   }
 });
 
-link.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popup.classList.add("modal-show");
-});
+for (var i = 0; i < cartLink.length; i++) {
+    cartLink[i].addEventListener("click", function (event) {
+      event.preventDefault();
+      popup.classList.add("modal-show");
+    });
+  }
 
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
@@ -29,8 +30,3 @@ window.addEventListener("keydown", function (evt) {
       }
     }
   });
-
-cartLink.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popup.classList.add("modal-show");
-});

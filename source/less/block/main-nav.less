@@ -58,14 +58,22 @@
   background-size: 21px 21px;
 }
 
-@media @mobile-width-only {
+@media (max-width: @mobile-width-only) {
   .main-nav--closed .site-list__item {
-    position: absolute;
-    top: -100px;
+    display: none;
 
     &--logo {
-      position: relative;
-      top: 0;
+      display: block;
+    }
+  }
+
+  .main-nav--opened .site-list__item {
+    display: flex;
+
+    &--arrival,
+    &--sale,
+    &--delivery {
+      display: none;
     }
   }
 
@@ -74,6 +82,7 @@
   }
 
   .main-nav--nojs .site-list__item {
+    display: flex;
     position: relative;
     top: 0;
 
