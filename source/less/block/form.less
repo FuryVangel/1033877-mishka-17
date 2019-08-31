@@ -26,7 +26,7 @@
   margin: 0 auto;
   padding-top: 25px;
   padding-bottom: 21px;
-  padding-left: 20px;
+  padding-right: 20px;
   color: @grey;
   box-sizing: content-box;
 }
@@ -185,11 +185,12 @@
     position: absolute;
     content: "";
     display: block;
-    left: 10px;
+    left: 6px;
     width: 33px;
     height: 22px;
+    top: 10px;
     background: url("../img/icon-tick.svg") no-repeat;
-    background-size: 22px 22px;
+    background-size: 25px 19px;
   }
 
   &--text {
@@ -423,6 +424,10 @@
     }
 
     &--checkbox:checked + .filter__label--checkbox::after {
+      left: 10px;
+      width: 33px;
+      height: 22px;
+      top: 13px;
       background-size: 33px 22px;
     }
 
@@ -517,7 +522,6 @@
 
   .form__filter {
     width: 790px;
-    padding-left: 60px;
 
     &--checkbox {
       justify-content: flex-start;
