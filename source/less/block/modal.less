@@ -1,0 +1,145 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  width: 320px;
+  min-height: 336px;
+  padding: 0 30px;
+  padding-top: 36px;
+  padding-bottom: 46px;
+  border: 1px solid #c6c6c6;
+  border-left: none;
+  border-right: none;
+  box-sizing: border-box;
+  background-color: @white;
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+}
+
+.modal-show {
+  display: block;
+}
+
+.modal__title {
+  font-size: 25px;
+  line-height: 30px;
+  color: @black;
+  margin: 0 auto;
+  margin-bottom: 8px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.modal__description {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 23px;
+  font-size: 15px;
+  line-height: 30px;
+  color: @grey;
+  text-align: center;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form__size {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 31px;
+  margin-top: 0;
+}
+
+.modal-form__label {
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  justify-content: center;
+  position: relative;
+  width: 82px;
+  height: 52px;
+  padding: 15px 0;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+}
+
+.modal-form__label::before {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  width: 82px;
+  height: 52px;
+  border: 2px solid @lightgrey;
+  box-sizing: border-box;
+}
+
+.modal-form__label:hover::before {
+  border-color: #c7c7c7;
+}
+
+.modal-form__label:active::before {
+  border-color: @turquoise;
+}
+
+.modal-form__input:checked + .modal-form__label::before {
+  border-color: @turquoise;
+}
+
+.modal-form__btn {
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  width: 260px;
+  border: none;
+  color: @white;
+  background-color: @turquoise;
+  cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .modal {
+    width: 568px;
+    padding-top: 30px;
+    padding-left: 108px;
+    padding-right: 108px;
+    border-left: 1px solid #c6c6c6;
+    border-right: 1px solid #c6c6c6;
+  }
+
+  .modal__title {
+    width: 100%;
+    margin-bottom: 18px;
+    font-size: 29px;
+    line-height: 57px;
+  }
+
+  .modal__description {
+    font-size: 17px;
+  }
+
+  .modal-form__label {
+    width: 112px;
+  }
+
+  .modal-form__label::before {
+    width: 112px;
+  }
+
+  .modal-form__btn {
+    width: 350px;
+    padding-top: 17px;
+    padding-bottom: 16px;
+  }
+}
