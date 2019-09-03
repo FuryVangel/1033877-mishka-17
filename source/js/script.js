@@ -22,6 +22,15 @@ for (var i = 0; i < cartLink.length; i++) {
     });
   }
 
+document.addEventListener ("click", function (event) {
+  var target = event.target;
+    if (!target.closest(".js-modal")) {
+    if (!target.closest(".modal-add")) {
+      popup.classList.remove("modal-show");
+    }
+  }
+});
+
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
       evt.preventDefault();
